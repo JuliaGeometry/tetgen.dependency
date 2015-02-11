@@ -1,3 +1,0 @@
-g++ -O3 -DTETLIBRARY -c -fpic tetgen.cxx wrapper.cpp
-g++ -O0 -c predicates.cxx
-g++ -shared -o libtetgen.so predicates.o tetgen.o wrapper.o
