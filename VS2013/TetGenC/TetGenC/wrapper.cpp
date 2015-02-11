@@ -142,7 +142,7 @@ __declspec(dllexport) void __cdecl _tetrahedralize(){
 	//   do quality mesh generation (q) with a specified quality bound
 	//   (1.414), and apply a maximum volume constraint (a0.1).
 
-	tetrahedralize(&tetgenbehavior(), &in, &out);
+	tetrahedralize("pq1.414a0.1", &in, &out);
 
 	// Output mesh to files 'barout.node', 'barout.ele' and 'barout.face'.
 	out.save_nodes("barout");
