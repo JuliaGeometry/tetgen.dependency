@@ -10,11 +10,11 @@
 #endif
 
 extern "C"{
-	__EXPORTED void __CDECL _tetrahedralize();
+	__EXPORTED void __CDECL c_tetrahedralize();
 }
 
 
-__EXPORTED void __CDECL _tetrahedralize(){
+__EXPORTED void __CDECL c_tetrahedralize(){
 	tetgenio in, out;
 	tetgenio::facet *f;
 	tetgenio::polygon *p;
