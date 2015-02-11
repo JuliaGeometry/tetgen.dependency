@@ -1,13 +1,20 @@
 // The C++ implementation
 #include "tetgen.h"
 
+#ifdef LINUX
+	#define __EXPORTED
+	#define __CDECL
+#else
+	#define __EXPORTED __declspec(dllexport)
+	#define __CDECL __cdecl
+#endif
 
 extern "C"{
-	__declspec(dllexport) void __cdecl _tetrahedralize();
+	__EXPORTED void __CDECL _tetrahedralize();
 }
 
 
-__declspec(dllexport) void __cdecl _tetrahedralize(){
+__EXPORTED void __CDECL _tetrahedralize(){
 	tetgenio in, out;
 	tetgenio::facet *f;
 	tetgenio::polygon *p;
